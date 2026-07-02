@@ -5,6 +5,7 @@ fn compute(a: u32, b: u32) -> u32 {
     a + b * 2
 }
 
+// Testing environment 
 #[cfg(test)]
 mod tests {
     use crate::compute;
@@ -14,6 +15,9 @@ mod tests {
         assert_eq!(compute(1,2), 5)
     }
 }
-// Adding an empty main function to satisfy the Rust compiler and rust-analyzer
-// since this file is located in a binary directory
-fn main() {}
+/* Adding an main function to satisfy the Rust compiler and rust-analyzer
+since this file is located in a binary directory */
+fn main() {
+    let result = compute(5, 10);
+    println!("The result is: {}", result)
+}
