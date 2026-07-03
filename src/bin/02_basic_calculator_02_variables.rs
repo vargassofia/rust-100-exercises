@@ -1,0 +1,20 @@
+// 👇 The lines below, starting with `///`, are called **documentation comments**.
+//    They attach documentation to the item that follows them. In this case, the `speed` function.
+//    If you run `cargo doc --open` from this exercise's directory, Rust will generate
+//    HTML documentation from these comments and open it in your browser.
+
+/// Given the start and end points of a journey, and the time it took to complete it,
+/// calculate the average speed.
+pub fn speed(start: u32, end: u32, time_elapsed: u32) -> u32 {
+    let distance: u32 = end - start; 
+    // TODO: define a variable named `distance` with the right value to get tests to pass
+    //  Do you need to annotate the type of `distance`? Why or why not?
+
+    // Don't change the line below
+    distance / time_elapsed
+}
+
+fn main () {
+    let result  = speed(0, 100, 10);
+    println!("The result is: {}", result)
+}
